@@ -1,6 +1,6 @@
 {
-  "name": "kdleds.cn",
   "private": true,
+  "name": "odlled.com",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -13,7 +13,8 @@
     "build:catalog": "node scripts/build-products-catalog.mjs",
     "strip-origin": "node scripts/strip-kdleds-origin.mjs",
     "build": "node scripts/strip-kdleds-origin.mjs && node scripts/build-products-catalog.mjs && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npx wrangler deploy"
   },
   "dependencies": {
     "vue": "^3.5.32",
@@ -22,6 +23,7 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^6.0.6",
     "cheerio": "^1.2.0",
-    "vite": "^8.0.10"
+    "vite": "^8.0.10",
+    "wrangler": "^4.90.0"
   }
 }

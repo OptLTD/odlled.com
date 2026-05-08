@@ -1,0 +1,10 @@
+# 供 Cloudflare「Workers 构建」里必填的部署命令：npx wrangler deploy
+# 文档：https://developers.cloudflare.com/workers/static-assets/routing/single-page-application/
+#
+# 请将下方 name 改成你在 Cloudflare 控制台里的 Worker 项目名称（需全局唯一）
+name = "odlled-site"
+compatibility_date = "2026-05-08"
+
+[assets]
+directory = "./dist"
+not_found_handling = "single-page-application"
