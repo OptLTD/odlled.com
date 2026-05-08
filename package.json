@@ -1,0 +1,27 @@
+{
+  "name": "kdleds.cn",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "mirror:template": "node scripts/mirror-template-assets.mjs",
+    "localize": "node scripts/localize-site.mjs",
+    "scrape": "node scripts/scrape.mjs",
+    "postscrape": "npm run localize && npm run build:catalog",
+    "build:fresh": "npm run scrape && vite build",
+    "build:catalog": "node scripts/build-products-catalog.mjs",
+    "strip-origin": "node scripts/strip-kdleds-origin.mjs",
+    "build": "node scripts/strip-kdleds-origin.mjs && node scripts/build-products-catalog.mjs && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "vue": "^3.5.32",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.6",
+    "cheerio": "^1.2.0",
+    "vite": "^8.0.10"
+  }
+}

@@ -1,0 +1,24 @@
+BODY {
+	FONT: 12px/1.5 "", Simsun, "Arial Unicode MS", Mingliu, Helvetica
+}
+UL {
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	PADDING-RIGHT: 0px;
+	FONT-FAMILY: 'Arial', 'ËÎÌו';
+	COLOR: #333;
+	PADDING-TOP: 0px
+}
+UL {
+	LIST-STYLE-TYPE: none
+}
+A {
+	COLOR: #666;
+	FONT-SIZE: 12px;
+	TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #eb7d05;
+	TEXT-DECORATION: none
+}

@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding:0;
+	margin:0;
+}
+body {
+	font-family:"微软雅黑";
+	margin:0 auto;
+	padding:0;
+	font-size:12px;
+}
+
+ul li {
+	list-style:none;
+}
+img {
+	border:none;
+}
+
+/*首页产品列表*/
+.product_list {
+	width:186px;
+	float:left;
+}
+.product_list_nr li {
+	line-height:34px;
+}
+.product_list_nr a {
+	cursor:pointer;
+	color:#000000;
+	font-family:"微软雅黑";
+	text-decoration:none;
+	margin-left:9px;
+	font-size:14px;
+	line-height:34px;
+	display:block;
+}
+.product_list_nr a:hover {
+	cursor:pointer;
+	color: #FF0066;
+	font-family:"微软雅黑";
+	text-decoration:none;
+	margin-left:9px;
+	font-size:14px;
+	line-height:34px;
+	display:block;
+}
+.product_list_nr {
+	width:186px;
+	font-weight:bold;
+}
+.f_x {
+	background:url(../images/product_list_bg.jpg) no-repeat 0px 0px;
+	width:186px;
+	line-height:34px;
+	margin-bottom:8px;
+}
+.f_x ul {
+	margin-top:10px;
+	margin-bottom:13px;
+	list-style:none;
+}
+.f_x ul li {
+	padding-left:20px;
+	line-height:34px;
+	background:url(../images/jia.jpg) no-repeat 10px 15px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #E3CFE9;
+}
+.f_x ul li a {
+	font-size:12px;
+	color:#000000;
+	font-weight:normal;
+}
+.f_x ul li a:hover {
+	font-size:12px;
+	color: #FF0066;
+	font-weight:normal;
+}
+.f_x ul {
+	display:none;
+}
+#menus {
+	display:block;
+}
+.product_list {
+	border:0px solid #63bce6;
+}
+.product_list_title {
+	padding-bottom:10px;
+}

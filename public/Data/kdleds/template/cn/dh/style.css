@@ -1,0 +1,138 @@
+@charset "utf-8";
+BODY {
+	PADDING: 0px;
+	MARGIN: 0px;
+}
+LI {
+	PADDING: 0px;
+	MARGIN: 0px;
+	LIST-STYLE-TYPE: none;
+	LIST-STYLE-IMAGE: none;
+}
+
+/*导航条菜单设置*/
+.navi {
+	width:1200px;
+	height:105px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+#header {
+	Z-INDEX: 100;
+	POSITION: relative;
+	MIN-HEIGHT:105px;
+	WIDTH:720px;
+	FLOAT: left;
+	_height:105px
+}
+#menu {
+	LIST-STYLE-TYPE: none;
+	MARGIN: 0px;
+	WIDTH:720px;
+	BACKGROUND: url(../images/menu_back.jpg) repeat-x left bottom;
+	FLOAT: left;
+	HEIGHT: 105px;
+	LIST-STYLE-IMAGE: none;
+	padding: 0px;
+}
+#menu LI {
+	POSITION: relative;
+	TEXT-ALIGN: center;
+	LINE-HEIGHT: 105px;
+	WIDTH: 102px;
+	FLOAT: left;
+	HEIGHT: 105px;
+}
+#menu #first {
+	WIDTH:3px;
+	FLOAT:left
+}
+#menu #end {
+	WIDTH:3px;
+	FLOAT: right
+}
+#menu LI A {
+	DISPLAY: block;
+	COLOR: #333;
+	FONT-WEIGHT: normal;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 105px;
+	text-decoration: none;
+}
+#menu LI A:hover {
+	DISPLAY: block;
+	BACKGROUND: url(../images/menu_hover.jpg) no-repeat center top;
+	COLOR: #2DABE5;
+	TEXT-DECORATION: none;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 105px;
+	font-weight: normal;
+}
+#menu LI A.now {
+	DISPLAY: block;
+	BACKGROUND: url(../images/menu_hover.jpg) no-repeat center top;
+	COLOR:#2DABE5;
+	TEXT-DECORATION: none;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 105px;
+	font-weight: normal;
+}
+#menu LI A.on {
+	DISPLAY: block;
+	BACKGROUND: url(../images/menu_hover.jpg) no-repeat center top;
+	COLOR:#2DABE5;
+	TEXT-DECORATION: none;
+	font-family: "微软雅黑";
+	font-size: 16px;
+	line-height: 105px;
+	font-weight: normal;
+}
+#menu LI UL {
+	POSITION: absolute;
+	FILTER: alpha(opacity=90);
+	MARGIN: 0px;
+	PADDING-LEFT: 0px;
+	WIDTH:102px;
+	DISPLAY: none;
+	TOP: 105px;
+	PADDING-TOP: 0px;
+	LEFT: 0px;
+	-moz-opacity: 0.9;
+	opacity: 0.9
+}
+
+
+
+/*下拉菜单设置*/
+#menu LI UL LI {
+	TEXT-ALIGN: center;
+	PADDING-BOTTOM: 0px;
+	MARGIN: 0px;
+	WIDTH:102px;
+	HEIGHT: auto;
+	PADDING-TOP: 0px;
+	background-color: #FCFCFC;
+}
+#menu LI UL LI A {
+	DISPLAY: block;
+	COLOR:#333333;
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: normal;
+	line-height: 30px;
+}
+#menu LI UL LI A:hover {
+	font-family: "微软雅黑";
+	font-size: 14px;
+	font-weight: normal;
+	color: #174286;
+	text-decoration: none;
+	background-image: none;
+	line-height: 30px;
+	background-color: #F8F5F3;
+}

@@ -1,0 +1,20 @@
+* {
+	margin:0;
+	padding:0;
+	list-style-type:none;
+}
+/* #marquee1 */
+#marquee1 {
+	width:600px;
+	height:450px;
+	overflow:hidden;
+	margin:0 auto;
+}
+#marquee1 ul li {
+	float:left;
+	width:600px;
+}
+#marquee1 ul li img {
+	display:block;
+	border:0px solid #ddd;
+}
