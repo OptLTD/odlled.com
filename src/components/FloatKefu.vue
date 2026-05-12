@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import wechatImg from '../assets/wechat.png'
 
 const props = defineProps({
   locale: { type: String, required: true },
@@ -10,8 +11,8 @@ function asset(rel) {
   return `${base}Data/kdleds/template/${rel}`
 }
 
-const qrSrc = computed(() => asset(`${props.locale}/kf/qr.png`))
 const skypeImg = computed(() => asset('en/kf/skype.jpg'))
+const qrCaption = computed(() => (props.locale === 'cn' ? '扫码加微信' : 'Scan Contact Us'))
 </script>
 
 <template>
@@ -41,30 +42,32 @@ const skypeImg = computed(() => asset('en/kf/skype.jpg'))
         <template v-if="locale === 'en'">
           <ul>
             <li class="topp">
-              <h3 class="titZx">QQ咨询</h3>
+              <h3 class="titZx">在线咨询</h3>
             </li>
             <li>
-              <a href="skype:Rebeca.xu1?chat"
-                ><img :src="skypeImg" width="21" height="21" border="0" alt="" /> Rebeca</a
-              >
+              <a href="skype:Rebeca.xu1?chat">
+                <img :src="skypeImg" width="21" height="21" border="0" alt="" style="margin:-6px 0;" /> 
+                <span>Rebeca</span>
+                </a>
             </li>
           </ul>
           <ul>
             <li>
-              <h3 class="titDh">电话咨询</h3>
+              <span class="icoTl">86-13714118486</span>
             </li>
-            <li><span class="icoTl">0755-29188209</span></li>
-            <li style="height: 100px">
-              <img :src="qrSrc" width="100" height="100" alt="" decoding="async" />
+            <li style="height: 100px; text-align: center;">
+              <img :src="wechatImg" width="100" height="100" alt="" decoding="async" />
             </li>
-            <li style="height: 30px; text-align: center">Scan attention</li>
+            <li style="height: 30px; text-align: center">
+              {{ qrCaption }}
+            </li>
           </ul>
         </template>
         <template v-else>
           <ul>
-            <li class="topp">
+            <!-- <li class="topp">
               <h3 class="titZx">QQ咨询</h3>
-            </li>
+            </li> -->
             <li><span class="icoZx">在线咨询</span></li>
             <li>
               <a
@@ -84,14 +87,14 @@ const skypeImg = computed(() => asset('en/kf/skype.jpg'))
             </li>
           </ul>
           <ul>
-            <li>
+            <!-- <li>
               <h3 class="titDh">电话咨询</h3>
+            </li> -->
+            <li><span class="icoTl">86-13714118486</span></li>
+            <li style="height: 100px; text-align: center;">
+              <img :src="wechatImg" width="100" height="100" alt="" decoding="async" />
             </li>
-            <li><span class="icoTl">0755-29188209</span></li>
-            <li style="height: 100px">
-              <img :src="qrSrc" width="100" height="100" alt="" decoding="async" />
-            </li>
-            <li style="height: 30px; text-align: center">扫描关注我们</li>
+            <li style="height: 30px; text-align: center">{{ qrCaption }}</li>
           </ul>
         </template>
       </div>

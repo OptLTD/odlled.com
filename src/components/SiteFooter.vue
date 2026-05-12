@@ -1,5 +1,6 @@
 <script setup>
 import { computed } from 'vue'
+import wechatImg from '../assets/wechat.png'
 
 const props = defineProps({
   locale: { type: String, required: true },
@@ -13,11 +14,7 @@ function asset(p) {
 /** 页脚顶部认证 / 资质横幅（原站 rz.jpg，中英文共用） */
 const certBannerSrc = computed(() => `${base}Data/kdleds/upload/image/rz.jpg`)
 
-const qrSrc = computed(() =>
-  props.locale === 'cn' ? asset('cn/kf/qr.png') : asset('en/kf/qr.png'),
-)
-
-const qrCaption = computed(() => (props.locale === 'cn' ? '扫描关注我们' : 'Scan attention'))
+const qrCaption = computed(() => (props.locale === 'cn' ? '扫码加微信' : 'Scan Contact Us'))
 
 const columns = computed(() =>
   props.locale === 'cn'
@@ -116,7 +113,7 @@ const columns = computed(() =>
     <div class="kd-foot-nav-wrap">
       <div class="kd-foot-nav-inner">
         <div class="kd-foot-qr">
-          <img :src="qrSrc" width="100" height="100" alt="" decoding="async" />
+          <img :src="wechatImg" width="100" height="100" alt="" decoding="async" />
           <p class="kd-foot-qr-cap">{{ qrCaption }}</p>
         </div>
         <div class="kd-foot-cols kd-clearfix">
